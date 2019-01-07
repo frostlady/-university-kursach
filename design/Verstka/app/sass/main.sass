@@ -1,0 +1,463 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  &:after, &:before
+    box-sizing: border-box
+
+::placeholder
+  color: #666
+
+::selection
+  background-color: $accent
+  color: #fff
+
+html, body
+  height: 100%
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: 1.4
+  font-family: $default-font
+  overflow-x: hidden
+  cursor: default
+  input, textarea
+    border: #666 1px solid
+    outline: none
+    &:focus:required:invalid
+      border-color: red
+    &:required:valid
+      border-color: green
+
+
+.trans
+  transition: all .4s ease
+
+a
+  @extend .trans
+  outline: none
+  text-decoration: none
+  display: inline-block
+  &:hover, &:focus, &:active
+    text-decoration: none
+    outline: none
+
+ul
+  list-style-type: none
+
+h1, h2, h3, h4
+  font-weight: 600
+
+
+//end
+
+
+.main_head
+  padding: 15px 0px
+  background-color: #000000
+  .wrap
+    text-align: center
+    ul
+      display: -webkit-flex
+      display: -moz-flex
+      display: -ms-flex
+      display: -o-flex
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: space-between
+      text-align: center
+      margin-bottom: 0
+      li
+        a
+          font-size: 18px
+          color: #cc66ff
+          @extend .trans
+          &:hover
+            color: #fff
+
+
+.main
+  background-image: url(../img/bg.jpg)
+  min-height: 709px
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+
+.our-work
+  background-color: #6600CC
+  padding: 25px
+  .works
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    flex-direction: row
+    align-items: flex-end
+    justify-content: space-between
+    flex-wrap: wrap
+    width: 100%
+    .work
+      width: 20%
+      display: -webkit-flex
+      display: -moz-flex
+      display: -ms-flex
+      display: -o-flex
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      .caption
+        font-family: 'jacob'
+        font-weight: bold
+        color: #fff
+        font-size: 24px
+        margin-top: 15px
+        margin-bottom: 0
+      .text
+        font-family: 'jacob'
+        font-weight: bold
+        color: #fff
+        font-size: 16px
+        text-align: center
+        padding-top: 20px
+        position: relative
+        &:before
+          content: ''
+          width: 150px
+          height: 2px
+          background-color: #fff
+          position: absolute
+          top: 0
+          left: 50%
+          transform: translateX(-50%)
+
+.penzli
+  padding: 60px 0px
+  .wrap-penzl
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    flex-direction: row
+    width: 100%
+    justify-content: space-between
+    flex-wrap: wrap
+    .img
+      background-image: url(../img/bg1.png)
+      background-position: center
+      background-repeat: no-repeat
+      background-size: cover
+      width: 48%
+    .img1
+      background-image: url(../img/bg2.png)
+      background-position: center
+      background-repeat: no-repeat
+      background-size: cover
+      width: 42%
+    .text_penzl
+      width: 45%
+      h2
+        margin-bottom: 65px
+        text-align: center
+        span
+          font-size: 24px
+          color: #000033
+          border-bottom: 1px solid #000033
+      p 
+        text-align: center
+        font-size: 14px
+        line-height: 1.5 !important
+          
+
+.our_team
+  padding: 50px 0px
+  background-color: #CCCCFF
+  h2
+    font-size: 30px
+    color: #330066
+    width: 100%
+    text-align: center
+    margin-bottom: 40px
+  .team
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+    .person
+      width: 21%
+      @extend .trans
+      .descr
+        opacity: 0
+        @extend .trans
+        background-color: #330066
+        border-radius: 3px
+        p
+          font-size: 16px
+          font-weight: bold
+          text-align: center
+          color: #fff
+        a
+          font-size: 14px
+          color: #fff
+          display: block
+          text-align: center
+          &:hover
+            opacity: 0.7
+      &:hover
+        .descr
+          opacity: 1
+      .name
+        font-size: 18px
+        color: #330066
+        font-weight: bold
+        text-align: center
+
+.footer
+  padding: 40px
+  background-color: #000
+  .footer_content
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    p
+      color: #cc66ff
+      font-size: 16px
+      line-height: 1.6 !important
+    .cont
+      border-left: 1px solid #cc66ff
+      padding: 10px 0px
+      padding-left: 20px
+      a
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        flex-direction: row
+        align-items: center
+        color: #cc66ff
+        &:hover
+          opacity: 0.7
+        img
+          margin-right: 7px
+  
+    
+.carousel_section
+  background-color: #6600CC
+  padding: 50px
+  .carousel
+    padding: 0 40px
+    .item
+      display: -webkit-flex
+      display: -moz-flex
+      display: -ms-flex
+      display: -o-flex
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: space-between
+      flex-wrap: wrap
+      .icon-client
+        width: 40%
+        img
+          width: 160px
+          height: 160px
+      .reviews
+        width: 58%
+      .name-client
+        font-size: 18px
+        color: #fff
+      .client-review
+        font-size: 16px
+        color: #fff
+        line-height: 1.6
+
+.owl-carousel .owl-nav
+  display: block
+  @extend .trans
+  &:hover
+    opacity: 0.7
+  .owl-prev
+    position: absolute
+    top: 43px
+    left: -30px
+  .owl-next
+    position: absolute
+    top: 43px
+    right: -30px
+
+
+//news
+
+.section-news
+  .news
+    padding: 75px 35px
+    .tab-box
+      display: -webkit-flex
+      display: -moz-flex
+      display: -ms-flex
+      display: -o-flex
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: flex-start
+      width: 100%
+      .tab-nav
+        width: 25%
+        text-align: left
+        li
+          padding-bottom: 30px
+          a
+            font-size: 16px
+            font-family: $default-font
+            color: #787683
+        h2
+          font-size: 30px
+          font-weight: 800
+          font-family: $default-font
+          color: #333051
+          padding-bottom: 30px
+    .tab-panels
+      width: 75%
+      .news-inner
+        width: 100%
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 60px
+        .text-news
+          width: 47%
+          display: -webkit-flex
+          display: -moz-flex
+          display: -ms-flex
+          display: -o-flex
+          display: flex
+          flex-direction: column
+          align-items: center
+          justify-content: center
+          .img-wrap
+            position: relative
+            width: 100%
+            height: auto
+            padding: 0
+            margin: 0
+            bottom: -4px
+            img
+              width: 100%
+              height: auto
+            span
+              position: absolute
+              top: 10px
+              right: 10px
+              background-color: #fff
+              padding: 3px 22px
+              border-radius: 40px
+              font-size: 12px
+              color: #333051
+          .text-inner
+            background-color: #fff
+            text-align: left
+            width: 100%
+            padding: 25px 45px
+            box-shadow: 0px 30px 58px 0px rgba(184, 182, 205, 0.19)
+            border: 1px solid  #ededf0
+            border-radius: 0px 0px 15px 15px
+            position: relative
+            .arrow-but-inner
+              position: absolute
+              right: -20px
+              bottom: -20px
+              &:after
+                content: ''
+                position: absolute
+                top: -11px
+                left: -11px
+                right: -11px
+                bottom: -11px
+                background: #F3F2F6
+                border-radius: 50%
+              .arrow-but
+                width: 40px
+                height: 40px
+                background: #fff
+                border-radius: 50%
+                border: 1px solid rgba(184, 182, 205, 1)
+                display: flex
+                align-items: center
+                justify-content: center
+                position: relative
+                z-index: 2
+                &:hover
+                  background-color: #9C8BF5
+                  i
+                    color: #fff
+                i
+                  font-size: 12px
+                  color: #a9a5bd
+                  @extend .trans
+            h3
+              padding-bottom: 20px
+              font-size: 20px
+              font-weight: bold
+              font-family: $default-font
+              color: #333051
+            .anons
+              font-size: 14px
+              font-family: $default-font
+              color: #333051
+            .news
+              display: none
+              font-size: 14px
+              font-family: $default-font
+              color: #333051
+            .a-inner
+              display: -webkit-flex
+              display: -moz-flex
+              display: -ms-flex
+              display: -o-flex
+              display: flex
+              flex-direction: row
+              justify-content: space-between
+              align-items: flex-start
+              padding-top: 25px
+              a
+                color: #a9a5bd
+                font-size: 10px
+                font-weight: bold
+                font-family: $default-font
+                text-transform: uppercase
+                &:hover
+                  color: $accent
+                i
+                  padding-right: 5px
+                  color: #000
+          
+//search
+
+
+
+@import "media" // Always at the end
